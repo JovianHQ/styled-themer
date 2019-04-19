@@ -23,7 +23,7 @@ exports.default = t;
 function color() {
   var args = ["color"].concat(arguments);
   return function(p) {
-    return "color: " + t.apply(null, args) + ";";
+    return "color: " + t.apply(null, args);
   };
 }
 
@@ -32,7 +32,7 @@ exports.color = color;
 function bgColor() {
   var args = ["color"].concat(arguments);
   return function(p) {
-    return "background-color: " + t.apply(null, args) + ";";
+    return "background-color: " + t.apply(null, args);
   };
 }
 
@@ -41,7 +41,7 @@ exports.bgColor = bgColor;
 function fontSize() {
   var args = ["fontSize"].concat(arguments);
   return function(p) {
-    return "font-size: " + t.apply(null, args) + ";";
+    return "font-size: " + t.apply(null, args);
   };
 }
 
