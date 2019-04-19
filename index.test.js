@@ -1,5 +1,10 @@
-var t = require(".");
+var styledThemer = require(".");
 var expect = require("expect");
+
+const t = styledThemer.default;
+const color = styledThemer.color;
+const bgColor = styledThemer.bgColor;
+const fontSize = styledThemer.fontSize;
 
 const props = {
   theme: {
@@ -18,3 +23,9 @@ const props = {
 expect(t("color", "white")(props)).toEqual("#fff");
 
 expect(() => t("hello", "world")(props)).toThrow();
+
+expect(color("white")(props)).toEqual("color: #fff");
+
+expect(bgColor("white")(props)).toEqual("background-color: #fff");
+
+expect(fontSize("default")(props)).toEqual("font-size: 14px");
